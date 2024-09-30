@@ -10,10 +10,12 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите трёхсназчное число:");
-            double A = Convert.ToDouble(Console.ReadLine());
-            A = A % 10 * 100 + A / 100 % 10 * 10 + A / 10 % 10;
-            Console.WriteLine(A);
+            int A = Convert.ToInt32(Console.ReadLine());
+            int first = A / 100;
+            int second = (A / 10) % 10;
+            int third = A % 10;
+            int itog = (first * 100) + (third * 10) + second;
+            Console.WriteLine(itog);
             Console.ReadKey();
         }
     }
