@@ -10,21 +10,19 @@ namespace Task7._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число:");
-            var n = double.Parse(Console.ReadLine());
-            if (n % 5 == 0)
+            Console.WriteLine("Введите число N");
+            var n = int.Parse(Console.ReadLine());
+            if (isTrue(n))
+            { Console.WriteLine("Число n кратно 5 или 7"); }
+            else
             {
-                Console.WriteLine("Кртано 5");
-            }
-            else if (n % 7 == 0)
-            {
-                Console.WriteLine("Кратно 7");
-            }
-            else 
-            { 
-                Console.WriteLine("Не кратно 7 и 5"); 
+                Console.WriteLine("Число не кратно 5 или 7");
             }
             Console.ReadKey();
         }
+        static bool isTrue(int n)
+        {
+            return n % 5 == 0 | n % 7 == 0; 
+        } 
     }
 }
