@@ -14,6 +14,7 @@ namespace Task_8
             var x = double.Parse(Console.ReadLine());
 
             Console.WriteLine($"f({x}) = {MyFunction(x)}");
+            Console.ReadKey();
         }
             static double MyFunction(double x)
             {
